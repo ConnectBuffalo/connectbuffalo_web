@@ -12,7 +12,7 @@ const FAQ = () => {
         },
         {
             question: "How much does the service cost?",
-            answer: "Our plans start at $25/month for basic internet access. We offer various tiers to suit different needs and budgets. Check our pricing page for more details.",
+            answer: "Our plans start at $25/month for basic internet access. We offer various tiers to suit different needs and budgets.",
         },
         {
             question: "Do I need special equipment to connect?",
