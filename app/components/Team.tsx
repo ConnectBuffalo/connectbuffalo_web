@@ -42,7 +42,7 @@ const teamMembers: Created[] = [
         image: require("/public/team/Regina-Hooton-grayscale.jpg?webp"),
     },
     {
-        name: "Jon Coupal",
+        name: "Jonathan Coupal",
         role: "Chief Infrastructure Officer",
         image: require("/public/team/Jon-Coupal-grayscale.png?webp"),
     },
