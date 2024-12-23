@@ -20,7 +20,7 @@ const FAQ = () => {
         },
         {
             question: "Is Connect Buffalo available in my area?",
-            answer: "We're continuously expanding our coverage in Buffalo. Enter your address on our website to check availability in your neighborhood.",
+            answer: "We're continuously expanding our coverage in Buffalo. We send notifications to residents when expansions are made.",
         },
         {
             question: "How can I get involved in the community network?",
