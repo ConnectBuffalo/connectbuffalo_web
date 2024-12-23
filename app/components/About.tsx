@@ -35,7 +35,7 @@ const About = () => {
           >
             <h3 className="text-2xl font-semibold text-blue-900 mb-4">How We Work</h3>
             <p className="text-gray-700">
-              Using a mesh network of community-hosted nodes, we create a resilient and expandable network that grows 
+              Using a network of managed and community-hosted nodes, we create a resilient and expandable network that grows 
               with our community. By leveraging innovative technology and the power of collaboration, we're able to 
               offer high-speed internet at a fraction of the cost of traditional providers.
             </p>
