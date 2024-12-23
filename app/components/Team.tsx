@@ -9,6 +9,7 @@ type Role = "ROLE_GOES_HERE"
     | "Chief Operating Officer"
     | "Chief Programming Officer"
     | "Chief Technology Officer"
+    | "Chief Infrastructure Officer"
     | string; // Added string to the type, just in case.
 
 type Created = {
