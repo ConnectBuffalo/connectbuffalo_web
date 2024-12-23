@@ -22,7 +22,7 @@ const Hero = () => {
                     className="text-center"
                 >
                     <h1 className="text-4xl md:text-6xl font-bold mb-4">Connect Buffalo</h1>
-                    <p className="text-xl md:text-2xl mb-8">Empowering our community with fast, affordable internet</p>
+                    <p className="text-xl md:text-2xl mb-8">Empowering Buffalo, Connecting Communitites.</p>
                     <div className="flex justify-center">
                         {/* @ts-ignore */}
                         <givebutter-widget id="pnGRdj" label="Get Connected"></givebutter-widget>
