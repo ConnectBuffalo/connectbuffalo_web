@@ -21,6 +21,7 @@ export default function Home() {
         <HowItWorks />
         <CommunityImpact />
         <Team />
+        <Partners />   
         <FAQ />
         <ContactForm />
       </main>
