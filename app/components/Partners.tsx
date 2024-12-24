@@ -15,9 +15,14 @@ const partners = [
     website: 'https://www.microsoft.com'
   },
   {
-    name: 'Community Foundation',
-    logo: 'https://www.cfgb.org/wp-content/uploads/2018/12/CFGB_Logo_Stacked_RGB.png',
-    website: 'https://www.cfgb.org'
+    name: 'Zendesk',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Zendesk_logo.svg/726px-Zendesk_logo.svg.png',
+    website: 'https://www.zendesk.com'
+  },
+  {
+    name: 'Datadog',
+    logo: 'https://1000logos.net/wp-content/uploads/2024/07/Datadog-Logo.png',
+    website: 'https://www.datadog.com'
   }
 ]
 
@@ -34,7 +39,7 @@ const Partners = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Partners</h2>
           <p className="text-xl text-gray-600">Working together to connect Buffalo</p>
         </motion.div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
           {partners.map((partner, index) => (
             <motion.div
               key={partner.name}
