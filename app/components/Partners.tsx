@@ -23,7 +23,7 @@ const partners = [
     name: 'Datadog',
     logo: 'https://1000logos.net/wp-content/uploads/2024/07/Datadog-Logo.png',
     website: 'https://www.datadog.com'
-  }
+  },
 ]
 
 const Partners = () => {
