@@ -28,7 +28,7 @@ const FAQ = () => {
         },
         {
             question: "What makes Connect Buffalo different from a typical ISP?",
-            answer: "Connect Buffalo stands apart from typical ISPs by prioritizing community needs over profit. We provide free, high-speed internet access without tracking user activity, ensuring a neutral and secure online experience.",
+            answer: "We stand apart from typical ISPs by prioritizing community needs over profit. We provide free, high-speed internet access without tracking user activity, ensuring a neutral and secure online experience.",
         },
     ];
 
