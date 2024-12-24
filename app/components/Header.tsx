@@ -31,6 +31,7 @@ const Header = () => {
           <NavLink href="#how-it-works">How It Works</NavLink>
           <NavLink href="#impact">Impact</NavLink>
           <NavLink href="#team">Team</NavLink>
+          <NavLink href="#partners">Partners</NavLink>
           <NavLink href="#faq">FAQ</NavLink>
           <NavLink href="#contact">Contact</NavLink>
         </nav>
