@@ -2,7 +2,7 @@
 
 import {useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
-import {ChevronDown, ChevronUp} from "lucide-react";
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const FAQ = () => {
     const faqs = [
@@ -51,7 +51,8 @@ const FAQ = () => {
                             transition={{duration: 0.5, delay: index * 0.1}}
                             className="mb-4"
                         >
-                            <button
+                            <motion.button
+                                layout
                                 className="flex justify-between items-center w-full text-left p-4 bg-blue-50 rounded-lg focus:outline-none"
                                 onClick={() => setActiveIndex(activeIndex === index ? null : index)}
                             >
@@ -61,17 +62,20 @@ const FAQ = () => {
                                 ) : (
                                     <ChevronDown className="w-6 h-6 text-blue-900"/>
                                 )}
-                            </button>
-                            <AnimatePresence>
+                            </motion.button>
+                            <AnimatePresence layout>
                                 {activeIndex === index && (
                                     <motion.div
-                                        initial={{opacity: 0, height: 0}}
-                                        animate={{opacity: 1, height: "auto"}}
-                                        exit={{opacity: 0, height: 0}}
-                                        transition={{duration: 0.3}}
-                                        className="p-4 bg-white border border-blue-100 rounded-b-lg"
+                                        layout
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                                        className="overflow-hidden"
                                     >
-                                        <p className="text-gray-700">{faq.answer}</p>
+                                        <div className="p-4 bg-white border border-blue-100 rounded-b-lg">
+                                            <p className="text-gray-700">{faq.answer}</p>
+                                        </div>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
