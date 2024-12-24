@@ -23,7 +23,7 @@ const plans = [
     icon: <Building2 className="w-12 h-12 text-blue-900" />,
     title: 'Corporate Sponsorship',
     description: 'Support the community and get high-speed internet',
-    price: 'Starting at $100',
+    price: 'Starting at $60',
     period: 'per month',
     features: [
       'Gigabit speeds',
