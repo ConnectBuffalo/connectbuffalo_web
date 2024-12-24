@@ -5,29 +5,14 @@ import Image from 'next/image'
 
 const partners = [
   {
-    name: 'City of Buffalo',
-    logo: 'https://www.buffalony.gov/ImageRepository/Document?documentID=1657',
-    website: 'https://www.buffalony.gov'
+    name: 'Cloudflare',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png',
+    website: 'https://www.cloudflare.com'
   },
   {
-    name: 'Buffalo Public Schools',
-    logo: 'https://www.buffaloschools.org/cms/lib/NY01913551/Centricity/Template/GlobalAssets/images///logos/District%20Logo.png',
-    website: 'https://www.buffaloschools.org'
-  },
-  {
-    name: 'University at Buffalo',
-    logo: 'https://www.buffalo.edu/content/dam/www/shared_assets/images/ub-logo/UB-Logo-2021.png',
-    website: 'https://www.buffalo.edu'
-  },
-  {
-    name: 'M&T Bank',
-    logo: 'https://www3.mtb.com/content/dam/mtb-web/images/mtb-logos/m&t-logo.png',
-    website: 'https://www.mtb.com'
-  },
-  {
-    name: 'Buffalo Bills',
-    logo: 'https://static.www.nfl.com/t_q-best/league/api/clubs/logos/BUF',
-    website: 'https://www.buffalobills.com'
+    name: 'Microsoft',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
+    website: 'https://www.microsoft.com'
   },
   {
     name: 'Community Foundation',
@@ -38,7 +23,7 @@ const partners = [
 
 const Partners = () => {
   return (
-    <section id="partners" className="py-20 bg-white">
+    <section id="partners" className="py-20 bg-blue">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
