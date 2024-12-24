@@ -24,6 +24,11 @@ const partners = [
     logo: 'https://1000logos.net/wp-content/uploads/2024/07/Datadog-Logo.png',
     website: 'https://www.datadog.com'
   },
+  {
+    name: 'Givebutter',
+    logo: 'https://doublethedonation.com/wp-content/uploads/2022/05/Givebutter-partner-logo.png',
+    website: 'https://www.givebutter.com'
+  },
 ]
 
 const Partners = () => {
