@@ -1,0 +1,5 @@
+[install.lockfile]
+print = "yarn"
+
+[run]
+bun = true

@@ -2,6 +2,7 @@
 
 import {motion} from "framer-motion";
 import Image from "next/image";
+import {cn} from "@/lib/utils";
 
 type Role = "ROLE_GOES_HERE"
     | "Chief Executive Officer"
@@ -20,6 +21,12 @@ type Created = {
         twitter?: string;
         linkedin?: string;
     };*/
+};
+const cols = {
+    gap: 8,
+    _: 1,
+    md: 2,
+    lg: 6,
 };
 const teamMembers: Created[] = [
     {
@@ -47,6 +54,11 @@ const teamMembers: Created[] = [
         role: "Chief Infrastructure Officer",
         image: require("/public/team/Jon-Coupal-grayscale.png?webp"),
     },
+    {
+        name: "Diablo",
+        role: "Mascot",
+        image: require("/public/team/Diablo-grayscale.jpg?webp"),
+    },
 ];
 
 const Team = () => {
@@ -62,7 +74,13 @@ const Team = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Team</h2>
                     <p className="text-xl text-gray-600">Meet the people behind Connect Buffalo</p>
                 </motion.div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div
+                    className={cn("grid",
+                        "grid-cols-1",
+                        "md:grid-cols-2",
+                        "lg:grid-cols-6",
+                        "gap-8",
+                    )}>
                     {teamMembers.map((member, index) => (
                         <motion.div
                             key={member.name}

@@ -1,10 +1,9 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import Link from 'next/link'
-import { ChevronDown } from 'lucide-react'
+import React, {useState} from "react";
+import {motion} from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,8 +12,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import { cn } from "@/lib/utils"
+} from "@/components/ui/navigation-menu";
+import {cn} from "@/lib/utils";
 import {BrandingSnowHorizontal} from "@/app/branding";
 
 const Header = () => {
