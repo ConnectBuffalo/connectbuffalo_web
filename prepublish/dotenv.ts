@@ -98,6 +98,6 @@ let deployYmlPath = path.join(__dirname, "..", ".github", "workflows", "deploy.y
 let deployYmlParsed = parse(fs.readFileSync(deployYmlPath).toString());
 console.log(deployYmlParsed.env);
 for (const ghVariablesKey in ghVariables) {
-    deployYmlParsed.env[ghVariablesKey] = `\${{ vars.${ghVariablesKey}}`;
+    deployYmlParsed.env[ghVariablesKey] = `\${{ vars.${ghVariablesKey} }}`;
 }
 fs.writeFileSync(deployYmlPath, stringify(deployYmlParsed));
