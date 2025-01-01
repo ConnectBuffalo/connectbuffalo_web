@@ -1,5 +1,6 @@
 import {configDotenv} from "dotenv";
 import {execSync, spawnSync} from "node:child_process";
+import {parse, stringify} from "yaml";
 import fs from "fs";
 import path from "path";
 
@@ -15,8 +16,10 @@ switch (process.argv[2]) {
     case "both":
         up = down = true;
         break;
+    case "yaml":
+        break;
     default:
-        throw new Error("argv[2] must be up, down, or 'both'.");
+        throw new Error("argv[2] must be up, down, 'both' (for up&down), or yaml (for only updating deploy.yml).");
 }
 
 configDotenv();
@@ -82,9 +85,19 @@ for (const key in ghVariables) {
         if (process.env[key] === undefined) {
             console.log("Variable", key, "is not set on Local. Adding momentarily.");
             addToDotenv(key, ghVariables[key]);
+            process.env[key] = ghVariables[key] ?? "";
         } else if (ghVariables[key] !== process.env[key]) {
             console.log("Variable", key, "is not the same on Github and local, updating Github (remote)");
             addToDotenv(key, ghVariables[key]);
+            process.env[key] = ghVariables[key] ?? "";
         }
     }
 }
+
+let deployYmlPath = path.join(__dirname, "..", ".github", "workflows", "deploy.yml");
+let deployYmlParsed = parse(fs.readFileSync(deployYmlPath).toString());
+console.log(deployYmlParsed.env);
+for (const ghVariablesKey in ghVariables) {
+    deployYmlParsed.env[ghVariablesKey] = `\${{ vars.${ghVariablesKey}}`;
+}
+fs.writeFileSync(deployYmlPath, stringify(deployYmlParsed));
