@@ -23,9 +23,8 @@ const About = () => {
           >
             <h3 className="text-2xl font-semibold text-blue-900 mb-4">Our Mission</h3>
             <p className="text-gray-700">
-              Connect Buffalo is a community-driven Wireless Internet Service Provider (WISP) dedicated to providing fast, 
-              reliable, and affordable internet access to all residents of Buffalo, NY. We believe that internet access is 
-              a fundamental right and essential for education, economic opportunity, and community engagement.
+              Connect Buffalo is committed to bridging the digital divide in Buffalo by providing free internet access and digital literacy resources to underserved communities.
+              Our mission is to empower individuals with the tools and knowledge needed to succeed in a digital world, fostering inclusion, education, and opportunity for all.
             </p>
           </motion.div>
           <motion.div
