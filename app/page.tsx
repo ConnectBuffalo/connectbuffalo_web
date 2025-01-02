@@ -11,6 +11,7 @@ import FAQ from "./components/FAQ";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import Newsletter from "@/app/components/Newsletter";
+import {Toaster} from "sonner";
 
 export default function Home() {
     return (
@@ -29,6 +30,7 @@ export default function Home() {
                 <ContactForm/>
                 <Newsletter/>
             </main>
+            <Toaster/>
             <Footer/>
         </div>
     );
