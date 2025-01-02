@@ -1,28 +1,34 @@
 "use client";
 
-import {useState} from "react";
+import React, {useState} from "react";
 import {motion} from "framer-motion";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
-// import { subscribeToNewsletter } from '@/app/actions/newsletter'
 import {toast} from "sonner";
 
 export default function Newsletter() {
     const [loading, setLoading] = useState(false);
+    const [submissionStatus, setSubmissionStatus] = useState<string | null>(null); // New state for submission status
 
     async function handleSubmit(formData: FormData) {
+        if (submissionStatus === "success") return; // Prevent further submissions if successful
         setLoading(true);
         try {
-            const result = {success: true, error: null};
-            if (result.success) {
+            const response = await fetch("https://connectbuffalo.org/api/submit_newsletter", {
+                method: "POST",
+                body: formData,
+            });
+
+            if (response.status == 200) {
+                setSubmissionStatus("success"); // Set success status
                 toast.success("Successfully subscribed to the newsletter!");
                 const form = document.getElementById("newsletter-form") as HTMLFormElement;
                 form?.reset();
             } else {
-                toast.error(result.error || "Failed to subscribe. Please try again.");
+                toast.error("Failed to subscribe. Please try again later.");
             }
         } catch (error) {
-            toast.error("An unexpected error occurred. Please try again.");
+            toast.error("An unexpected error occurred. Please try again later.");
         } finally {
             setLoading(false);
         }
@@ -50,6 +56,7 @@ export default function Newsletter() {
                             type="text"
                             name="firstName"
                             placeholder="First Name"
+                            disabled={loading || submissionStatus === "success"}
                             className="bg-white/10 text-white placeholder:text-gray-300 border-white/20"
                             required
                         />
@@ -57,12 +64,13 @@ export default function Newsletter() {
                             type="email"
                             name="email"
                             placeholder="Email Address"
+                            disabled={loading || submissionStatus === "success"}
                             className="bg-white/10 text-white placeholder:text-gray-300 border-white/20"
                             required
                         />
                         <Button
                             type="submit"
-                            disabled={loading}
+                            disabled={loading || submissionStatus === "success"} // Disable if loading or successful
                             className="bg-white text-blue-900 hover:bg-blue-100"
                         >
                             {loading ? "Subscribing..." : "Subscribe"}
@@ -73,4 +81,3 @@ export default function Newsletter() {
         </section>
     );
 }
-
